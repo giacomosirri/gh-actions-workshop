@@ -43,6 +43,8 @@ jobs:
       run: npm test
 
     - name: Test coverage report
+      # We want to see the report even if the test coverage fails
+      if: always()
       uses: davelosert/vitest-coverage-report-action@v2.7.0
       with:
         vite-config-path: vite.config.ts
