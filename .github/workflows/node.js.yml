@@ -35,3 +35,7 @@ jobs:
     
     - name: Test 
       run: npm test
+
+    - name: Test coverage report
+      uses: davelosert/vitest-coverage-report-action@v2.7.0
+              
