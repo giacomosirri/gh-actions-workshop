@@ -125,4 +125,4 @@ jobs:
           region: westeurope
           deploymentName: ${{ vars.APPNAME }}-deployment
           template: ./infra/web-app/main.bicep
-          parameters: "containerImage=${{ needs.package-and-publish.outputs.container }} actor=${{ github.actor }} appName=aw-${{ vars.APP_NAME }} repository=${{ github.repository }}"
+          parameters: "containerImage=${{ needs.package-and-publish.outputs.container }} actor=${{ github.actor }} appName=aw-${{ vars.APPNAME }} repository=${{ github.repository }}"
