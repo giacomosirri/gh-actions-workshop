@@ -53,6 +53,8 @@ jobs:
   package-and-publish:
     name: 🐳 Create package and publish it to GitHub container registry
     runs-on: ubuntu-latest
+    outputs:
+      container: ${{ steps.meta.outputs.tags }}
     needs: 
       - build
     permissions:
